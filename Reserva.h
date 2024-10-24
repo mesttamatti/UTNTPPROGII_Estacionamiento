@@ -1,14 +1,6 @@
 #pragma once
 #include "Fecha.h"
 
-class servicioReserva{
-private:
-
-};
-
-#pragma once
-#include "Fecha.h"
-
 class Reserva{
 private:
     int _IDReservas, _IDCliente, _IDEstacionamiento, _Dias;
