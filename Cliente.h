@@ -1,21 +1,21 @@
 #ifndef CLIENTE_H_INCLUDED
 #define CLIENTE_H_INCLUDED
 
-class Cliente{
+class Cliente: public Persona{
 private:
-    string _cuit, _telefono, _mail;
+   int _tipo
 
 public:
     Cliente();
-    Cliente(string cuit, telefono, mail);
 
-    void setCuit(string cuit);
-    void setTelefono(string telefono);
-    void setMail(string mail);
+    void setTipo(int _tipo);
 
-    string getCuit();
-    string getTelefono();
-    string getMail();
+    int getTipo(return _tipo);
+
+Cargar(){
+    Persona.cargar();
+    cout<<"TIPO DE CLIENTE: ";cin>>_tipo;
+}
 
 };
 
