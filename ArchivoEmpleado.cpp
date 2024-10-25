@@ -15,6 +15,7 @@ bool modificarRegistro(Empleado obj, int nroReg);
 
 bool validarId(int id);
 int buscarPorId(int id);
+int login(int id);
 
     bool escribirRegistro(Empleado reg) {
         FILE* p;
@@ -112,6 +113,57 @@ int buscarPorId(int id){
     return -1;
 }
 
+int login(int id){
+    Empleado obj;
+    FILE *p;
+    p=fopen("Empleado.dat","rb");
+    if(p==nullptr){
+        return -2;
+    }
+    char* ingreso[15];
+    cout<<"INGRESE PASSWORD\n
+        (RESPETE MAYUSCULAS Y MINUSCULAS)\n
+    > "; cin<<ingreso;
+    cls();
     
+    bool idCoincidente=0;
+    int pos=0;
+    
+    while(fread(&obj, sizeof obj, 1, p)==1){
+        if(obj.getId()==id && obj.getEstado()== true){
+            fclose(p);
+            idCoincidente =1;
+        }
+        pos++;
+    }
+    fclose(p);
+    
+    if(idCoincidente==1){
+        if(strcmp(*obj.getPassword(), *ingreso)==0){
+            return obj.getJerarquia();
+    } else{
+        bool continuar;
+        cout<<"PASSWORD NO VALIDO. REINTENTAR? (1: SI -- 0: NO): "; cin<<continuar;
+        
+        while(continuar){
+            cout<<"INGRESE PASSWORD\n
+                (RESPETE MAYUSCULAS Y MINUSCULAS)\n
+                > "; cin<<ingreso;
+            cls();
+            
+        if(strcmp(*obj.getPassword(), *ingreso)==0){
+        return obj.getJerarquia();
+    } else{  
+            cout<<"PASSWORD NO VALIDO. REINTENTAR? (1: SI -- 0: NO): "; cin<<continuar;
+            }
+        }
+    }
+    } else{ 
+        cout<<"NO SE ENCONTRO ID VALIDO EN REGISTROS";
+        cls();
+        return 0;} 
+    
+}
+
 };
 
