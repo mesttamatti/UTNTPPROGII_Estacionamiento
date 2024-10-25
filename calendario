@@ -3,28 +3,28 @@
 using namespace std;
 
 void printCalendar(int year, int month) {
-    int daysInMonth[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-    if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
-        daysInMonth[1] = 29; // Año bisiesto
+    int diasEnMes[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    if ((ano % 4 == 0 && ano % 100 != 0) || ano % 400 == 0) {
+        diasEnMes[1] = 29; 
     }
 
-    string months[] = {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
-    int day = 1; // Empezamos el calendario desde el día 1
+    string meses[] = {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
+    int dia = 1; 
 
-    cout << "    " << months[month - 1] << " " << year << endl;
+    cout << "    " << meses[meses - 1] << " " << ano << endl;
     cout << "Do Lu Ma Mi Ju Vi Sa" << endl;
 
-    // Vamos a asumir que el primer día del mes comienza en lunes (por simplicidad)
-    int startDay = 1;
+    
+    int diaInicial = 1;
 
-    // Imprimir espacios para los días hasta el primer día del mes
-    for (int i = 0; i < startDay; ++i) {
+   
+    for (int i = 0; i < diaInicial; ++i) {
         cout << "   ";
     }
 
-    for (int i = 1; i <= daysInMonth[month - 1]; ++i) {
+    for (int i = 1; i <= diasEnMes[mes - 1]; ++i) {
         cout << setw(2) << i << " ";
-        if ((i + startDay) % 7 == 0) {
+        if ((i + diaInicial) % 7 == 0) {
             cout << endl;
         }
     }
@@ -32,13 +32,13 @@ void printCalendar(int year, int month) {
 }
 
 int main() {
-    int year, month;
+    int ano, mes;
     cout << "Introduce el año: ";
-    cin >> year;
+    cin >> ano;
     cout << "Introduce el mes (1-12): ";
-    cin >> month;
+    cin >> mes;
 
-    printCalendar(year, month);
+   mostarCalendario(ano, mes);
 
     return 0;
 }
