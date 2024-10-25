@@ -1,8 +1,8 @@
 #include <iostream>
-#include <iomanip> // Para std::setw
+#include <iomanip> 
 using namespace std;
 
-void printCalendar(int year, int month) {
+void mostrarCalendario(int ano, int mes) {
     int diasEnMes[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     if ((ano % 4 == 0 && ano % 100 != 0) || ano % 400 == 0) {
         diasEnMes[1] = 29; 
