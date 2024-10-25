@@ -10,7 +10,7 @@ public:
 bool escribirRegistro(Empleado reg);
 Empleado leerRegistro(int pos);
 int contarRegistros();
-bool listarArchivo();
+bool listarArchivo(int jerarquia);
 bool modificarRegistro(Empleado obj, int nroReg);
 
 bool validarId(int id);
@@ -48,7 +48,7 @@ int login(int id);
         return tam / sizeof(Punto1);
     }
 
-    bool listarArchivo() {
+    bool listarArchivo(int jerarquia) {
         Empleado reg;
         FILE* p;
         p = fopen(nombre, "rb");
@@ -57,8 +57,10 @@ int login(int id);
             return false;
         }
         while (fread(&reg, sizeof reg, 1, p) == 1) {
+            if(reg.getJerarquia()==jerarquia){
             reg.Mostrar();
-            cout << endl;
+            cout << endl;}
+            
         }
         fclose(p);
         return true;
