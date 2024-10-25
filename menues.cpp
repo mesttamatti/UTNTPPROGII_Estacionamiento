@@ -10,24 +10,28 @@ int main() {
 }
 
 void MenuPrincipal() {
-    int tipoEmpleado;
-    Login(tipoEmpleado);
     
-    if (tipoEmpleado == 1) {
+    if (Login()== 1) {
         MenuCajero();
-    } else {
+    } else if(Login()==2){
         MenuGerente();
+    } else{
+        cout << "Usuario no encontrado";
     }
 }
 
-void Login(int &tipoEmpleado) {
+int Login() {
     // Implementar lógica de autenticación y asignar tipo de empleado
+    
     cout << "Ingrese ID: ";
-    // ... lectura y validaciones
+    // INGRESO ID
     cout << "Ingrese Contraseña: ";
-    // ... lectura y validaciones
-    // Simulación de login exitoso
-    tipoEmpleado = 1; // 1 para Cajero, 2 para Gerente
+    // INGRESO PASS
+    
+    //LEER ARCHIVO EMPLEADOS && ESTADO==TRUE
+    // DEVUELVE EL TIPO
+    // 1 para Cajero, 2 para Gerente
+    return empleado.getJerarquia();
 }
 
 void MenuCajero() {
@@ -45,7 +49,7 @@ void MenuCajero() {
 
         switch (opcion) {
             case 1: 
-                // Lógica para hacer reserva
+                
                 break;
             case 2:
                 // Lógica para cancelar reserva
