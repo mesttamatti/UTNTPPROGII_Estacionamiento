@@ -12,7 +12,8 @@ public:
 
 void cargar(){
   Persona.cargar();
-  
+  cout<<"TIPO DE JERARQUIA: ";cin>>_jerarquia;
+  cout<<"CONTRASEÑA DE USUARIO: "; strcpy(_password,14);
 }
 
 };
