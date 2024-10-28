@@ -1,6 +1,5 @@
 // Prototipos de funciones
 void MenuPrincipal();
-void Login(int &tipoEmpleado);
 void MenuCajero();
 void MenuGerente();
 
