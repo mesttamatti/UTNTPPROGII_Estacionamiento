@@ -1,6 +1,6 @@
 class Empleado: public Persona{
 private:
-int _jerarquia;
+int _jerarquia; // 1 para Cajero, 2 para Gerente
 char _password[15];
 
 public: 
