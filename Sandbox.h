@@ -9,14 +9,17 @@ logica:
 crear registro nuevo de movimiento
 
 abrir archivo
-int cantReg= archivo.contar reg() //verificar si es 15 o menor, aplicara diferente supongo(?
+int cantReg= archivo.contar reg() 
 crear vec din movimientos[cantReg];
+
 cargar el vector con los registros guardados
 
 archivo.vaciar();
 
-registro nuevo.escribir()
-hago un for(r=cantReg;r>0;r--){
+registro nuevo.escribir() // el nuevo registro quedara siempre primero
+
+cantReg= (cantReg<=14) ? cantReg : 14; //verificar si cantReg es menor o igual a 14. si es menor o igual se puede escribir todos, sino quedaran los 14 primeros
+hago un for(r=0;r<cantReg;r++){
 vector[r].escribir()
 }
 
