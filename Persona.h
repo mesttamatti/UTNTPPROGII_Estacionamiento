@@ -19,10 +19,8 @@ public:
 
     void Mostrar(){
         cout<<"NUMERO DE IDENTIFICACION: "<<_id<<endl;
-        cout<<"NOMBRE "<<_nombre<<endl;
-        cout<<"APELLIDO "<<_apellido<<endl;
-        cout<<"EMAIL "<<_email<<endl;
-        cout<<"TELEFONO "<<_telefono<<endl;
+        cout<<"NOMBRE: "<<_nombre<<" "<<_apellido<<endl;
+        cout<<"EMAIL: "<<_email<<"  TELEFONO: "<<_telefono<<endl;
     }
 
 	int getID(){return _id;}
