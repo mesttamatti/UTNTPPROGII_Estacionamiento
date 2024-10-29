@@ -3,18 +3,36 @@
 
 class Cliente: public Persona{
 private:
-   int _tipo
+   char _tipo;
 
 public:
     Cliente();
 
-    void setTipo(int _tipo);
+    void setTipo(char _tipo);
 
-    int getTipo(return _tipo);
+    char getTipo(return _tipo);
 
 Cargar(){
     Persona.cargar();
-    cout<<"TIPO DE CLIENTE: ";cin>>_tipo;
+    cout<<"TIPO DE CLIENTE: "<<endl;
+   cout<<"A: EMPRESA, B: PARTICULAR ";cin>>_tipo;
+   
+   do{
+      if(_tipo=="a"||_tipo=="A"){_tipo="A"; } else if(_tipo=="b"||_tipo=="B"){ _tipo="B";} else{
+         cout<<"TIPO DE CLIENTE INVALIDO"<<endl;
+         cout<<endl;
+         cout<<"TIPO DE CLIENTE: "<<endl;
+         cout<<"A: EMPRESA, B: PARTICULAR ";cin>>_tipo;
+      }
+     } while(_tipo != "A" || _tipo != "B");
+      
+}
+
+void Mostrar(){
+   Persona.mostrar();
+   cout<<"TIPO: "<<_tipo;
+   if(_tipo=="A"){ cout<<" EMPRESA"<<endl;} else if(_tipo=="B"){ cout<<" PARTICULAR"<<endl;}
+
 }
 
 };
