@@ -114,12 +114,12 @@ public:
         archivoCargado = new Movimiento[cantReg];
 
         if(archivoCargado==NULL){
-            cout<<"Error de asignación de memoria"<<endl;
+            cout<<"Error de asignacion de memoria"<<endl;
             system("pause");
             system("cls");
             return false;
             }
-        archivoCargado=cargarArchivoEnMemoria();
+        archivoCargado= cargarArchivoMovimiento();
         vaciar();
 
         escribirRegistro(reg);

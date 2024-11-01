@@ -1,6 +1,8 @@
 #ifndef LISTADOS_H_INCLUDED
 #define LISTADOS_H_INCLUDED
 
+#include"funcionesExtra.h"
+
 void listadosCliente();
 void clientesLista(ArchivoCliente* vectr);
 void clientesListaTipo(ArchivoCliente* vectr);
@@ -114,7 +116,7 @@ void listadosCliente(){
 
 void listadosEmpleado(){
 Empleado* archi;
-archi=archi.cargarArchivoEnMemoria();
+archi=cargarArchivoEmpleado();
 
 while(true){
         int opc;
