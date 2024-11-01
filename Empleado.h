@@ -40,7 +40,7 @@ Persona::cargar();
           }
             }
 
-  cout<<"CONTRASEÑA DE USUARIO: "; cin>>_password;
+  cout<<"CONTRASENIA DE USUARIO: "; cin>>_password;
 }
 
 
