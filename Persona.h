@@ -1,3 +1,7 @@
+#ifndef PERSONA_H_INCLUDED
+#define PERSONA_H_INCLUDED
+#pragma once
+
 class Persona{
 private:
         int _id;
@@ -5,14 +9,14 @@ private:
         char _apellido[30];
         char _email[30];
         int _telefono;
-        bool estado;
+        bool _estado;
 public:
 
-    void Cargar(){
+    void cargar(){
         cout<<"NUMERO DE IDENTIFICACION: ";cin>>_id;
-        cout<<"NOMBRE "; strcpy(_nombre,29);
-        cout<<"APELLIDO "; strcpy(_apellido,29);
-        cout<<"EMAIL "; strcpy(_email,29);
+        cout<<"NOMBRE "; cin>>_nombre;
+        cout<<"APELLIDO "; cin>>_apellido;
+        cout<<"EMAIL "; cin>>_email;
         cout<<"TELEFONO "; cin>>_telefono;
         _estado=true;
     }
@@ -27,14 +31,17 @@ public:
 	const char *getNombre(){return _nombre;}
 	const char *getApellido(){return _apellido;}
 	const char *getEmail(){return _email;}
-	int getID(){return _telefono;}
+	int getTelefono(){return _telefono;}
 	bool getEstado(){return _estado;}
 
 
 	void setId(int nump){_id=nump;}
-	void setNombre(char* nomb){strcpy(_nombre, nomb)}
-	void setApellido(char* apel){strcpy(_apellido, apel)}
-	void setEmail(char* mail){strcpy(_email, mail)}
+	void setNombre(char* nomb){strcpy(_nombre, nomb);}
+	void setApellido(char* apel){strcpy(_apellido, apel);}
+	void setEmail(char* mail){strcpy(_email, mail);}
 	void setTelefono(int tel){_telefono=tel;}
 	void setEstado(bool e){_estado=e;}
 };
+
+
+#endif // PERSONA_H_INCLUDED

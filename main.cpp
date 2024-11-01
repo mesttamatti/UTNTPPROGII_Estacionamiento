@@ -1,9 +1,14 @@
-#include <iostream>
+
+#include<iostream>
+#include<cstring>
+#include<ctime>
 
 using namespace std;
 
+#include"menues.h"
+
 int main()
 {
-    cout << "Bienvenido,  "<< endl;
+    MenuPrincipal();
     return 0;
 }

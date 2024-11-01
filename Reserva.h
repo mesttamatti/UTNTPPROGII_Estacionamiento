@@ -1,5 +1,8 @@
+#ifndef RESERVA_H_INCLUDED
+#define RESERVA_H_INCLUDED
 #pragma once
 #include "Fecha.h"
+
 int Reserva::_IDReserva =0; //inicializacion para que empiece a contar
 
 class Reserva{
@@ -7,7 +10,7 @@ private:
 static int _IDReserva;
     int _IDEmpleado;
     int _IDCliente;
-    int _IDEstacionamiento; 
+    int _IDEstacionamiento;
     int _Dias;
     Fecha _Ingreso;
     float _Importe;
@@ -40,7 +43,10 @@ public:
         cout<<"NUMERO DE IDENTIFICACION DE CLIENTE: "; cin>>_IDCliente;
         cout<<"FECHA DE INGRESO: "; _Ingreso.cargar();
         cout<<"CANTIDAD DIAS ABONADOS: "; cin>>_Dias;
-        cout<<"IMPORTE TOTAL: "; cin>>_Importe;
+        //abrir arch estacionamiento y traer valor por dia, multiplicarlo
+        //_Importe= estacionamiento.getPrecio(archivoestacionamiento.leerregistro(archivoestacionamiento.buscarporID(estacionamiento)))
+        _Importe=_Importe*_Dias;
+        cout<<"IMPORTE TOTAL: "; _Importe;
         _estado=true;
     }
 
@@ -56,4 +62,4 @@ void mostrar(){
     std::string toCSV();
 };
 
-
+#endif // RESERVA_H_INCLUDED

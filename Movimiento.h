@@ -1,3 +1,7 @@
+#ifndef MOVIMIENTO_H_INCLUDED
+#define MOVIMIENTO_H_INCLUDED
+
+#include"Fecha.h"
 /*
 Lista de acciones:
 1. Hizo la Reserva #
@@ -29,7 +33,8 @@ public:
 Movimiento(){};
 
 void Cargar(int idUser, int tipo, int accion, int idReg){
-this->_fecha.cargar();
+//this->_fecha;
+//poner la fecha de hoy
 _accion=accion;
 _idUsuario=idUser;
 _tipoUser= tipo;
@@ -38,11 +43,11 @@ _idRegistro=idReg;
 
 void Mostrar(){
 cout<<_fecha.toString();
-  
-if(_tipoUser==1){"El Cajero #"} else if(_tipoUser==2){"El Gerente #"}
-  
+
+if(_tipoUser==1){cout<<"El Cajero #";} else if(_tipoUser==2){cout<<"El Gerente #";}
+
 cout<<_idUsuario;
-  
+
 switch(_accion){
 case 1:
   cout<<" Hizo la Reserva #";
@@ -92,9 +97,12 @@ case 1:
   cout<<" Dio de baja al Gerente #";
     break;
 }
-  
+
 cout<<_idRegistro<<endl;
 
 }
 
 };
+
+
+#endif // MOVIMIENTO_H_INCLUDED

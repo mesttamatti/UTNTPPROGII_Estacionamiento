@@ -13,10 +13,10 @@ public:
     char getTipo(return _tipo);
 
 Cargar(){
-    Persona.cargar();
+    Persona::cargar();
     cout<<"TIPO DE CLIENTE: "<<endl;
    cout<<"A: EMPRESA, B: PARTICULAR ";cin>>_tipo;
-   
+
    do{
       if(_tipo=="a"||_tipo=="A"){_tipo="A"; } else if(_tipo=="b"||_tipo=="B"){ _tipo="B";} else{
          cout<<"TIPO DE CLIENTE INVALIDO"<<endl;
@@ -25,11 +25,11 @@ Cargar(){
          cout<<"A: EMPRESA, B: PARTICULAR ";cin>>_tipo;
       }
      } while(_tipo != "A" || _tipo != "B");
-      
+
 }
 
 void Mostrar(){
-   Persona.mostrar();
+   Persona::Mostrar();
    cout<<"TIPO: "<<_tipo;
    if(_tipo=="A"){ cout<<" EMPRESA"<<endl;} else if(_tipo=="B"){ cout<<" PARTICULAR"<<endl;}
 

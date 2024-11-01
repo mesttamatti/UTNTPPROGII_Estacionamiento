@@ -1,0 +1,52 @@
+# depslib dependency file v1.0
+1730157869 source:c:\users\danie\onedrive\documentos\tp greupal\utntpprogii_estacionamiento-main\fecha.cpp
+	"Fecha.h"
+
+1730157869 c:\users\danie\onedrive\documentos\tp greupal\utntpprogii_estacionamiento-main\fecha.h
+	<string>
+
+1730343287 source:c:\users\danie\onedrive\documentos\tp greupal\estacionamiento\main.cpp
+	<iostream>
+	<cstring>
+	<ctime>
+	"menues.h"
+
+1730159562 source:c:\users\danie\onedrive\documentos\tp greupal\utntpprogii_estacionamiento-main\menues.cpp
+
+1730159606 source:c:\users\danie\onedrive\documentos\tp greupal\utntpprogii_estacionamiento-main\archivoempleado.cpp
+
+1730413670 c:\users\danie\onedrive\documentos\tp greupal\estacionamiento\menues.h
+	"ArchivoEmpleado.h"
+	"funcionesMenuGerente.h"
+	"funcionesMenuEmpleado.h"
+
+1730426324 c:\users\danie\onedrive\documentos\tp greupal\estacionamiento\archivoempleado.h
+	<cstring>
+	"Empleado.h"
+
+1730426324 c:\users\danie\onedrive\documentos\tp greupal\estacionamiento\empleado.h
+	"Persona.h"
+
+1730382089 c:\users\danie\onedrive\documentos\tp greupal\estacionamiento\persona.h
+
+1730418736 c:\users\danie\onedrive\documentos\tp greupal\estacionamiento\funcionesmenugerente.h
+	"Movimiento.h"
+	"ArchivoMovimientos.h"
+
+1730414297 c:\users\danie\onedrive\documentos\tp greupal\estacionamiento\funcionesmenuempleado.h
+
+1730418736 c:\users\danie\onedrive\documentos\tp greupal\estacionamiento\movimiento.h
+	"Fecha.h"
+
+1730426361 c:\users\danie\onedrive\documentos\tp greupal\estacionamiento\archivomovimientos.h
+	"Movimiento.h"
+	"funcionesExtra.h"
+
+1730162173 c:\users\danie\onedrive\documentos\tp greupal\estacionamiento\fecha.h
+
+1730426638 c:\users\danie\onedrive\documentos\tp greupal\estacionamiento\funcionesextra.h
+	"ArchivoEmpleado.h"
+	"Empleado.h"
+	"ArchivoMovimientos.h"
+	"Movimiento.h"
+
