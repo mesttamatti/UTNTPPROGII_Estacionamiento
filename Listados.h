@@ -14,7 +14,12 @@ void listadosEmpleado();
     void empleadoListaID(ArchivoEmpleado* vectr);
 
 void listadosReserva();
-
+void listarReservas(ArchivoReserva* vectr);
+void listaIDEstacionamiento(ArchivoReserva* vectr);
+void listaIDCliente(ArchivoReserva* vectr);
+void listaIDEmpleado(ArchivoReserva* vectr);
+void listaFechaReserva(ArchivoReserva* vectr);
+                
 void menuListado() {
      while(true){
         int opc;
@@ -165,6 +170,9 @@ while(true){
 }
 
 void listadosReserva(){
+    Reserva* archi;
+    archi=cargarArchivoReserva();
+    
     while(true){
         int opc;
 
@@ -192,15 +200,21 @@ void listadosReserva(){
 
         switch (opc) {
             case 1:
-                listadosCliente();
+               listarReservas(archi);
                 break;
             case 2:
-                listadosEmpleado();
+                listaIDEstacionamiento(archi);
                 break;
             case 3:
-                listadosReserva();
+                listaIDCliente(archi);
                 break;
-
+            case 4:
+                listaIDEmpleado(archi);
+                break;
+            case 5:
+                listaFechaReserva(archi);
+                break;
+            
             case 0:
                 return;
                 break;
@@ -261,6 +275,7 @@ if(ingreso=="A"){cout<<"---CLIENTES EMPRESA REGISTRADOS---"<<endl;} else if(ingr
     system("cls");
 }
 
+//TERMINAR
 void clientesListaID(ArchivoCliente* vectr){
     cout<<"ESTACIONAMIENTO MULTINIVEL"<<endl;
     cout<<"----------------------------------------"<<endl;
@@ -312,6 +327,7 @@ if(ingreso==1){cout<<"---CAJEROS REGISTRADOS---"<<endl;} else if(ingreso==2){cou
     system("cls");
 }
 
+//TERMINAR
 void empleadoListaID(ArchivoEmpleado* vectr){
 cout<<"ESTACIONAMIENTO MULTINIVEL"<<endl;
     cout<<"----------------------------------------"<<endl;
@@ -319,5 +335,24 @@ cout<<"ESTACIONAMIENTO MULTINIVEL"<<endl;
     cout<<"----------------------------------------"<<endl;
 }
 
+void listarReservas(ArchivoReserva* vectr){
+cout<<"ESTACIONAMIENTO MULTINIVEL"<<endl;
+    cout<<"----------------------------------------"<<endl;
+    cout<<"MENU LISTADOS: RESERVAS"<<endl;
+    cout<<"----------------------------------------"<<endl;
+ for(int a=0;a<vectr.size();a++){
+        vectr[a].mostrar();
+        cout<<endl;
+    }
+    system("pause");
+    system("cls");
+    
+}
+
+//TERMINAR
+void listaIDEstacionamiento(ArchivoReserva* vectr){}
+void listaIDCliente(ArchivoReserva* vectr){}
+void listaIDEmpleado(ArchivoReserva* vectr){}
+void listaFechaReserva(ArchivoReserva* vectr){}
 
 #endif // LISTADOS_H_INCLUDED
