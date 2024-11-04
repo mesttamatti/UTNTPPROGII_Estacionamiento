@@ -33,8 +33,7 @@ public:
 Movimiento(){};
 
 void Cargar(int idUser, int tipo, int accion, int idReg){
-//this->_fecha;
-//poner la fecha de hoy
+_fecha.actual();
 _accion=accion;
 _idUsuario=idUser;
 _tipoUser= tipo;
