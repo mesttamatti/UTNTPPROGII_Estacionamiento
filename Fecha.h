@@ -31,6 +31,18 @@ Fecha::Fecha(int dia, int mes, int anio){
     _anio = anio;
 }
 
+void Fecha::actual(){
+    std::time_t t = std::time(nullptr);
+    std::tm* now = std::localtime(&t);
+
+    _dia = now->tm_mday;
+    _mes = now->tm_mon + 1;
+    _anio = now->tm_year + 1900;
+    
+    return; 
+}
+
+
 int Fecha::getDia(){
     return _dia;
 }
