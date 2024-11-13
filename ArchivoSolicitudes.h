@@ -169,8 +169,9 @@ bool ArchivoSolicitudes::seleccionSolicitudes(int idActivo) {
             reg.Mostrar();
             cout << endl;
           
-          cout << "ACEPTAR RESERVA? ACEPTAR (1), RECHAZAR(2), SIGUIENTE (3), SALIR(0): " << endl;
+          cout << "ACEPTAR RESERVA? ACEPTAR (1), RECHAZAR(2), SIGUIENTE (3), SALIR(0): " ;
 cin>>opc;
+            cout << endl;
           switch(opc){
             case 1:
             aceptarReserva(reg, idActivo);
@@ -190,11 +191,13 @@ cin>>opc;
             return true;
             break;
 
-            case :
-           cout << "INVALIDO." << endl;
-            cout << "ACEPTAR RESERVA? ACEPTAR (1), RECHAZAR(2), SIGUIENTE (3), SALIR(0): " << endl;
-cin>>opc;
+            default:
+            cout << "INVALIDO." << endl;
+            cout << "ACEPTAR RESERVA? ACEPTAR (1), RECHAZAR(2), SIGUIENTE (3), SALIR(0): ";
+            cin>>opc;
+            cout << endl;
             break;
+               
           }
            cout << "SIGUIENTE..." << endl;
           system("pause");
